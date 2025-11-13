@@ -1,5 +1,19 @@
-default:
-	python gen.py >colors/256_noir.vim
+VIM_DIR = ~/.vim/colors
+NVIM_DIR = ~/.config/nvim/colors
 
-install: default
-	cp colors/256_noir.vim ~/.vim/colors/
+default:
+	python gen.py > colors/256_noir.vim
+
+install_vim: default
+	mkdir -p $(VIM_DIR)
+	cp colors/256_noir.vim $(VIM_DIR)
+
+install_nvim: default
+	mkdir -p $(NVIM_DIR)
+	cp colors/256_noir.vim $(NVIM_DIR)
+
+uninstall_vim: default
+	rm $(VIM_DIR)/256_noir.vim
+
+uninstall_nvim: default
+	rm $(NVIM_DIR)/256_noir.vim
