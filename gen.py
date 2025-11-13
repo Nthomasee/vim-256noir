@@ -30,11 +30,14 @@ let g:colors_name = "256_noir"
 # Group       ctermfg ctermbg  cterm
 COLORS = """
 Normal        250     16       NONE
-Keyword       255     16       NONE
+Keyword       243     16       NONE
+Function      255     16       NONE
+Special       255     16       NONE
 Constant      252     16       NONE
 String        245     16       NONE
 Comment       240     16       NONE
 Number        196     16       NONE
+Todo          88      16       bold,italic
 Error         255     88       NONE
 ErrorMsg      255     124      NONE
 Search        245     236      NONE
@@ -61,15 +64,15 @@ TermCursor    NONE    NONE     reverse
 LINKS = [
         ('Normal', 'Boolean', 'Delimiter', 'Identifier', 'Title', 'Debug',
             'Exception', 'FoldColumn', 'Macro', 'ModeMsg', 'MoreMsg',
-            'Question'),
+            'Question', 'Normal'),
         ('Keyword', 'Conditional', 'Statement', 'Operator', 'Structure',
-            'Function', 'Include', 'Type', 'Typedef', 'Todo', 'Label',
+            'Include', 'Type', 'Typedef', 'Label',
             'Define', 'DiffAdd', 'diffAdded', 'diffCommon', 'Directory',
-            'PreCondit', 'PreProc', 'Repeat', 'Special', 'SpecialChar',
-            'StorageClass'),
+            'PreCondit', 'PreProc', 'Repeat', 'StorageClass'),
         ('String', 'SpecialComment', 'CursorLineNr'),
         ('Number', 'Character', 'Float', 'Tag', 'Folded', 'WarningMsg'),
         ('SpecialKey', 'iCursor'),
+        ('Special', 'SpecialChar'),
         ('SpellCap', 'SpellLocal'),
         ('Comment', 'LineNr', 'NonText', 'DiffDelete', 'diffRemoved'),
         ('Visual', 'PmenuSbar', 'PmenuSel', 'VisualNOS', 'VertSplit'),
@@ -89,6 +92,7 @@ TORGB = {
         234: '#1c1c1c',
         236: '#303030',
         240: '#585858',
+        243: '#767676',
         245: '#8a8a8a',
         250: '#bcbcbc',
         252: '#d0d0d0',
@@ -107,6 +111,7 @@ TO16 = {
         234: 'DarkGray',
         236: 'DarkGray',
         240: 'DarkGray',
+        243: 'Darkgray',
         245: 'Gray',
         250: 'Gray',
         252: 'Gray',
@@ -135,3 +140,4 @@ if __name__ == '__main__':
     for a in LINKS:
         for b in a[1:]:
             print('highlight! link %s %s' % (b, a[0]))
+# 'Special', 'SpecialChar',
