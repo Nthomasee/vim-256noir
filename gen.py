@@ -140,4 +140,3 @@ if __name__ == '__main__':
     for a in LINKS:
         for b in a[1:]:
             print('highlight! link %s %s' % (b, a[0]))
-# 'Special', 'SpecialChar',
