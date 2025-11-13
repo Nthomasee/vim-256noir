@@ -12,8 +12,8 @@ install_nvim: default
 	mkdir -p $(NVIM_DIR)
 	cp colors/256_noir.vim $(NVIM_DIR)
 
-uninstall_vim: default
+uninstall_vim:
 	rm $(VIM_DIR)/256_noir.vim
 
-uninstall_nvim: default
+uninstall_nvim:
 	rm $(NVIM_DIR)/256_noir.vim
