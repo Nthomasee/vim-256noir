@@ -1,7 +1,9 @@
 VIM_DIR = ~/.vim/colors
 NVIM_DIR = ~/.config/nvim/colors
 
-default:
+default: colors/256_noir.vim
+
+colors/256_noir.vim: gen.py
 	python gen.py > colors/256_noir.vim
 
 install_vim: default
@@ -17,3 +19,5 @@ uninstall_vim:
 
 uninstall_nvim:
 	rm $(NVIM_DIR)/256_noir.vim
+
+.PHONY: default install_vim install_nvim uninstall_vim uninstall_nvim
