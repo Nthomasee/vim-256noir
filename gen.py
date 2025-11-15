@@ -56,7 +56,7 @@ MatchParen    16      240      NONE
 CursorLine    NONE    233      NONE
 StatusLine    245     16       bold,reverse
 StatusLineNC  236     16       reverse
-Visual        250     16       reverse
+Visual        243     16       reverse
 TermCursor    NONE    NONE     reverse
 """
 
