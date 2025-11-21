@@ -64,7 +64,7 @@ TermCursor    NONE    NONE     reverse
 LINKS = [
         ('Normal', 'Boolean', 'Delimiter', 'Identifier', 'Title', 'Debug',
             'Exception', 'FoldColumn', 'Macro', 'ModeMsg', 'MoreMsg',
-            'Question', 'Normal'),
+            'Question'),
         ('Keyword', 'Conditional', 'Statement', 'Operator', 'Structure',
             'Include', 'Type', 'Typedef', 'Label',
             'Define', 'DiffAdd', 'diffAdded', 'diffCommon', 'Directory',
